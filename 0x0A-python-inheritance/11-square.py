@@ -1,6 +1,4 @@
-""" a Rectangle subclass Square."""
-Rectangle = __import__('9-rectangle').Rectangle
-
+from 9_rectangle import Rectangle  # Assuming 9_rectangle.py contains the Rectangle class
 
 class Square(Rectangle):
     """Represent a square."""
@@ -11,6 +9,6 @@ class Square(Rectangle):
         Args:
             size (int): The size of the new square.
         """
-        self.integer_validator("size", size)
-        super().__init__(size, size)
+        super().__init__(size, size)  # Initialize Rectangle with size as width and height
         self.__size = size
+
