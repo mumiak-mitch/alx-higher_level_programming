@@ -1,4 +1,5 @@
-from 9_rectangle import Rectangle  # Assuming 9_rectangle.py contains the Rectangle class
+Rectangle = __import__('9-rectangle').Rectangle
+
 
 class Square(Rectangle):
     """Represent a square."""
@@ -9,6 +10,6 @@ class Square(Rectangle):
         Args:
             size (int): The size of the new square.
         """
-        super().__init__(size, size)  # Initialize Rectangle with size as width and height
+        self.integer_validator("size", size)
+        super().__init__(size, size)
         self.__size = size
-
